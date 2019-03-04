@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import * as Icon from 'react-feather';
 
-export const ContactPageTemplate = ({ name, address, city_state_zip, phone, fax, hours }) => {
+export const ContactPageTemplate = ({ name, address1, address2, city_state_zip, phone, fax, email }) => {
   return (
     <div>
       <div className="container container-main grid-md">
@@ -14,7 +14,8 @@ export const ContactPageTemplate = ({ name, address, city_state_zip, phone, fax,
           </div>
           <div className="card-body">
             {name}<br />
-            {address}<br />
+            {address1}<br />
+            {address2}<br />
             {city_state_zip}
           </div>
         </div>
@@ -24,15 +25,8 @@ export const ContactPageTemplate = ({ name, address, city_state_zip, phone, fax,
           </div>
           <div className="card-body">
             T: {phone}<br />
-            F: {fax}
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-header">
-            Hours
-          </div>
-          <div className="card-body">
-            {hours}
+            F: {fax}<br />
+            E: {email}
           </div>
         </div>
       </div>
@@ -50,7 +44,6 @@ export const ContactPageTemplate = ({ name, address, city_state_zip, phone, fax,
 ContactPageTemplate.propTypes = {
   address: PropTypes.string,
   phone: PropTypes.string,
-  hours: PropTypes.string,
 }
 
 const ContactPage = ({ data }) => {
@@ -60,11 +53,12 @@ const ContactPage = ({ data }) => {
     <Layout>
       <ContactPageTemplate
         name={frontmatter.name} 
-        address={frontmatter.address}
+        address1={frontmatter.address1}
+        address2={frontmatter.address2}
         city_state_zip={frontmatter.city_state_zip}
         phone={frontmatter.phone}
         fax={frontmatter.fax}
-        hours={frontmatter.hours}
+        email={frontmatter.email}
       />
     </Layout>
   )
@@ -82,11 +76,12 @@ export const contactPageQuery = graphql`
       html
       frontmatter {
         name,
-        address,
+        address1,
+        address2
         city_state_zip,
         phone,
         fax,
-        hours
+        email
       }
     }
   }

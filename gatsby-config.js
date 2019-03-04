@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: 'WCWD Advisory',
-    description: 'Advisory site for Wood Creek Water District, East Laurel Water District and West Laurel Water Association',
+    title: 'CEA Advisory',
+    description: 'Advisory site for Caveland Environmental Authority',
   },
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
       // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: "UA-134546071-3",
+        trackingId: "UA-134546071-7",
       },
     },
     'gatsby-plugin-react-helmet',

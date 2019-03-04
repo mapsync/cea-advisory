@@ -2,9 +2,10 @@
 templateKey: contact-page
 title: Contact
 name: Wood Creek Water District
-address: 1670 E Hal Rogers Parkway
-city_state_zip: London, KY 40741
-phone: (606) 878-9420
-fax: (606) 878-9425
-hours: 8:00AM - 4:30PM (Monday - Friday)
+address1: P.O. Box 426
+address2: 508 South Dixie Hwy
+city_state_zip: Cave City, KY 42127
+phone: (270) 773-2887
+fax: (270) 773-2283
+email: customerservice@ceawater.com
 ---
